@@ -76,6 +76,8 @@ public class Main {
     }
 
     private static void mostrarTodos() {
-
+        estudiantes.forEach((id, nombreCompleto) -> {
+            System.out.println("ID: " + id + " - " + "Nombre Completo: " + nombreCompleto);
+        });
     }
 }

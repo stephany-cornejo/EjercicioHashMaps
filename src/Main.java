@@ -64,7 +64,15 @@ public class Main {
     }
 
     private static void eliminarAlumno() {
+        System.out.println("Ingresar ID del estudiante: ");
+        String id = scanner.nextLine();
 
+        if(estudiantes.containsKey(id)) {
+            estudiantes.remove(id);
+            System.out.println("Estudiante eliminado correctamente!");
+        } else {
+            System.out.println("Estudiante no encontrado!");
+        }
     }
 
     private static void mostrarTodos() {

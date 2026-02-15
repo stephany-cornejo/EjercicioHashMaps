@@ -53,7 +53,14 @@ public class Main {
     }
 
     private  static void buscarAlumno() {
+        System.out.println("Ingresar ID del estudiante: ");
+        String id = scanner.nextLine();
 
+        if(estudiantes.containsKey(id)) {
+            System.out.println("Nombre completo: " + estudiantes.get(id));
+        } else {
+            System.out.println("Estudiante no encontrado!");
+        }
     }
 
     private static void eliminarAlumno() {

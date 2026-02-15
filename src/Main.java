@@ -33,7 +33,13 @@ public class Main {
     }
 
     private static void mostraMenu() {
-
+        System.out.println("----- MENU -----");
+        System.out.println("1. Agregar alumno");
+        System.out.println("2. Buscar alumno");
+        System.out.println("3. Eliminar alumno");
+        System.out.println("4. Mostrar todos");
+        System.out.println("5. Cerrar");
+        System.out.println("Escoja una opción: ");
     }
 
     private static void agregarAlumno() {

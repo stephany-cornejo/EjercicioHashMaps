@@ -5,7 +5,7 @@ public class Main {
     private static HashMap<String, String> estudiantes = new HashMap<>();
     private static Scanner scanner = new Scanner((System.in));
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         while(true) {
             mostraMenu();
 
@@ -43,7 +43,13 @@ public class Main {
     }
 
     private static void agregarAlumno() {
+        System.out.print("ID del estudiante: ");
+        String id = scanner.nextLine();
+        System.out.print("Nombre Completo del estudiante: ");
+        String nombreCompleto = scanner.nextLine();
 
+        estudiantes.put(id, nombreCompleto);
+        System.out.println("Estudiante ingresado correctamente!");
     }
 
     private  static void buscarAlumno() {

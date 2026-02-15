@@ -43,6 +43,7 @@ public class Main {
     }
 
     private static void agregarAlumno() {
+        System.out.println("-----AGREGAR ALUMNO-----");
         System.out.print("ID del estudiante: ");
         String id = scanner.nextLine();
         System.out.print("Nombre Completo del estudiante: ");
@@ -53,6 +54,7 @@ public class Main {
     }
 
     private  static void buscarAlumno() {
+        System.out.println("-----BUSCAR ALUMNO-----");
         System.out.println("Ingresar ID del estudiante: ");
         String id = scanner.nextLine();
 
@@ -64,6 +66,7 @@ public class Main {
     }
 
     private static void eliminarAlumno() {
+        System.out.println("-----ELIMINAR ALUMNO-----");
         System.out.println("Ingresar ID del estudiante: ");
         String id = scanner.nextLine();
 
@@ -76,8 +79,13 @@ public class Main {
     }
 
     private static void mostrarTodos() {
-        estudiantes.forEach((id, nombreCompleto) -> {
-            System.out.println("ID: " + id + " - " + "Nombre Completo: " + nombreCompleto);
-        });
+        if (estudiantes.isEmpty()) {
+            System.out.println("Sin estudiantes que mostrar!");
+        }else {
+            System.out.println("-----TODOS LOS ESTUDIANTES-----");
+            estudiantes.forEach((id, nombreCompleto) -> {
+                System.out.println("ID: " + id + " - " + "Nombre Completo: " + nombreCompleto);
+            });
+        }
     }
 }
